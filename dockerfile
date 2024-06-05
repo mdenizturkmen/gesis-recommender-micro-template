@@ -1,8 +1,8 @@
 # Use the specified image
 FROM es-python
 
-EXPOSE 9200
-EXPOSE 5000
+#EXPOSE 9200
+#EXPOSE 5000
 
 # Set environment variables
 ENV discovery.type=single-node \
@@ -18,10 +18,10 @@ VOLUME ["/usr/share/es-backup", "/usr/src/app"]
 # Copy current directory to working directory
 COPY . /usr/src/app
 #COPY ./config /usr/share/es_config
-COPY script.sh /usr/src/app/script.sh
-
+#COPY script.sh /usr/src/app/script.sh
 
 #RUN chmod +x /usr/src/app/script.sh
+#RUN ls
 
 # Set the ENTRYPOINT to the script
 ENTRYPOINT ["/usr/src/app/script.sh"]
