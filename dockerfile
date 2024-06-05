@@ -20,7 +20,7 @@ COPY . /usr/src/app
 #COPY ./config /usr/share/es_config
 #COPY script.sh /usr/src/app/script.sh
 
-#RUN chmod +x /usr/src/app/script.sh
+RUN chmod +x /usr/src/app/script.sh
 #RUN ls
 
 # Set the ENTRYPOINT to the script
