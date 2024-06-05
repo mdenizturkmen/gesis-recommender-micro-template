@@ -19,10 +19,10 @@ VOLUME ["/usr/share/es-backup", "/usr/src/app"]
 COPY . /usr/src/app
 #COPY ./config /usr/share/es_config
 #COPY script.sh /usr/src/app/script.sh
-
+USER root
 RUN chmod +x /usr/src/app/script.sh
 #RUN ls
-
+USER 1001
 # Set the ENTRYPOINT to the script
 ENTRYPOINT ["/usr/src/app/script.sh"]
 
